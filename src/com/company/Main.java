@@ -1,3 +1,4 @@
+// Joaquín Ortiz Castillo 2016100319
 package com.company;
 
 import java.util.Scanner;
@@ -21,11 +22,11 @@ public class Main {
             }
         }
         for (double v : a) {
-            System.out.print(v + " ");
+            System.out.print(String.format("%.2f",v)+" ");
         }
         return a;
     }
-    public static double buscarMayorSismo(double[] a) {
+    public static String buscarMayorSismo(double[] a) {
         int i=0;
 
         double n=0;
@@ -33,11 +34,11 @@ public class Main {
             if ( a[i] > n ) n = a[i];
             i++;
         }
-        return n;
+        return String.format("%.2f",n);
     }
     public static void mostrarMayorSismo(double[] a){
-        double mayorSismo = buscarMayorSismo(a);
-        System.out.println(+mayorSismo+"\n");
+        String mayorSismo = buscarMayorSismo(a);
+        System.out.println(mayorSismo+"\n");
     }
     public static int contarSismos(double[] a){
         int i=0;
@@ -136,12 +137,8 @@ public class Main {
         }
     }
     public static void startProgram(){
-        System.out.println("Bienvenido.");
+        System.out.println("Bienvenido, se ha simulado el ingreso de sismos.");
         executeMenu();
         showMenu();
     }
 }
-
-// print del array cada vez que se muestra el menu maybe?
-// como redondeo los numeros pa dejarlos con solo 1 decimal?
-// tirar un error de excepcion si ingreso una letra en vez de un numero?
