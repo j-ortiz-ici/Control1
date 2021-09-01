@@ -22,7 +22,7 @@ public class Main {
             }
         }
         for (double v : a) {
-            System.out.print(String.format("%.2f",v)+" ");
+            System.out.print(String.format("%.1f",v)+" ");
         }
         return a;
     }
@@ -34,7 +34,7 @@ public class Main {
             if ( a[i] > n ) n = a[i];
             i++;
         }
-        return String.format("%.2f",n);
+        return String.format("%.1f",n);
     }
     public static void mostrarMayorSismo(double[] a){
         String mayorSismo = buscarMayorSismo(a);
